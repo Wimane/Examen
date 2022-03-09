@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Eventos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+ <body>
+        <h1 th:text="${titulo}"></h1>
+        <a th:href="@{/eventosN}">Nuevo Evento</a>
+       
+        <table>
+           
+                <thead>
+                    <tr>
+                        <th>Artista</th>
+                        <th>Costo</th>
+                        <th>Fecha</th>
+                        <th>Capacidad</th>
+                        <th>Lugar</th>
+                        <th>Eliminar</th>
+                        <!--<th>Modificar</th>-->
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:block th:each="user : ${personas}">
+                    <!--<td th:text="${user.getId}"></td>-->
+                    <td th:text="${user.getArtista}"></td>
+                    <td th:text="${user.getCosto}"></td>
+                    <td th:text="${user.getFecha}"></td>
+                    <td th:text="${user.getCapacidad}"></td>
+                    <td th:text="${user.getLugar}"></td>
+                   
+                    <!--<td> <a th:href="@{/delete/{id} (id=${user.getid})}">Delete</a></td>-->
+                </tr>
+                </tbody>
+        </table>
+        </div>
+    </body>
+</html>
+

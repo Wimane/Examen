@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Lista de Eventos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+       <div>
+           
+            <section>
+                <div style="width: 35%; margin: 0px auto;">
+            <form th:object= "${evento}"
+                  th:action="@{/guardarEvento}"
+                  method="POST">
+                <div class="container">   
+                    <div>
+                        <h1>Lista de nuevos eventos</h1>
+                    </div>
+                    <br>
+
+                    <div
+                        <label for="id">Id</label>
+                        <input type="text"name="id" th:field="*{id}" placeholder="id" id="id"/>
+                    </div>
+                    <br>
+
+                    <div
+                        <label for="artista">Artista</label>
+                        <input type="text"name="artista" th:field="*{artista}" placeholder="artista" id="artista"/>
+                    </div>
+                    <br>
+                    <div
+                        <label for="costo">Costo</label>
+                        <input type="text"name="costo" th:field="*{costo}" placeholder="costo" id="costo"/>
+                    </div>
+                    <br>
+                    <div
+                        <label for="fecha">Fecha</label>
+                        <input type="text"name="fecha" th:field="*{fecha}" placeholder="fecha" id="fecha"/>
+                    </div>
+                    <br>
+                    <div
+                        <label for="capacidad">Capacidad</label>
+                        <input type="text"name="capacidad" th:field="*{capacidad}" placeholder="capacidad" id="capacidad"/>
+                    </div>
+                    <br>
+                    <div
+                        <label for="lugares">Lugares</label>
+                        <input type="text"name="lugares" th:field="*{lugares}" placeholder="lugares" id="lugares"/>
+                    </div>
+                    <br>
+                   
+                
+                </div>
+                <br>
+                <button type="submit"  value="Guardar">Submit</button>
+               
+                </div>
+                </section>
+        </div>
+    </body>
+</html>
